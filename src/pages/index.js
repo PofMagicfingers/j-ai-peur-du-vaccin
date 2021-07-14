@@ -1,7 +1,7 @@
-import * as React from "react"
+import * as React from "react";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 // styles
 const pageStyles = {
@@ -9,42 +9,42 @@ const pageStyles = {
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
   maxWidth: 720,
-  margin: "auto"
-}
+  margin: "auto",
+};
 
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
   maxWidth: 720,
-}
+};
 
 const headingAccentStyles = {
   color: "#663399",
-}
+};
 
 const paragraphStyles = {
   marginBottom: 48,
   maxWidth: 720,
-}
+};
 
 const listStyles = {
   marginBottom: 96,
   paddingLeft: 0,
-}
+};
 
 const listItemStyles = {
   fontWeight: 300,
   fontSize: 18,
   maxWidth: 720,
   marginBottom: 30,
-}
+};
 
 const linkStyle = {
   color: "#8954A8",
   fontWeight: "bold",
   fontSize: 16,
   verticalAlign: "5%",
-}
+};
 
 const descriptionStyle = {
   color: "#232129",
@@ -52,7 +52,7 @@ const descriptionStyle = {
   marginTop: 10,
   marginBottom: 0,
   lineHeight: 1.25,
-}
+};
 
 const badgeStyle = {
   color: "#fff",
@@ -68,11 +68,11 @@ const badgeStyle = {
   top: -2,
   marginLeft: 10,
   lineHeight: 1,
-}
+};
 
 const sourceStyle = {
   marginLeft: 10,
-  fontSize: 12
+  fontSize: 12,
 };
 
 // data
@@ -83,17 +83,17 @@ const questions = [
       "Les vaccins COVID, bien qu'ayant des effets secondaires, présentent moins de risque d'effets sur la santé que le COVID, peut importe son âge ou le vaccin utilisé.",
     color: "#E95800",
     sources: [
-        {
-          text: "Page interactive de calcul balance bénéfice risques",
-          url: "https://cress-umr1153.fr/covid_vaccines/",
-          author: "Centre de recherche épidémiologie et statistiques"
-        },
-        {
-          text: "[VIDÉO] Scénario sans vaccins VS avec vaccin : qui gagne ?",
-          url: "https://www.youtube.com/watch?v=hOWB7o6XUSU",
-          author: "Chat Sceptique"
-        }
-    ]
+      {
+        text: "Page interactive de calcul balance bénéfice risques",
+        url: "https://cress-umr1153.fr/covid_vaccines/",
+        author: "Centre de recherche épidémiologie et statistiques",
+      },
+      {
+        text: "[VIDÉO] Scénario sans vaccins VS avec vaccin : qui gagne ?",
+        url: "https://www.youtube.com/watch?v=hOWB7o6XUSU",
+        author: "Chat Sceptique",
+      },
+    ],
   },
   {
     text: "Le vaccin n'empêche pas d'attraper ou de transmettre le COVID",
@@ -104,9 +104,9 @@ const questions = [
       {
         text: "A quel point la vaccination freine-t-elle la transmission du COVID ?",
         url: "https://www.francetvinfo.fr/sante/maladie/coronavirus/vaccin/covid-19-a-quel-point-la-vaccination-freine-t-elle-la-transmission-du-virus_4690869.html",
-        author: "France Info"
-      }
-    ]
+        author: "France Info",
+      },
+    ],
   },
   {
     text: "Je ne suis pas sûr du contenu des vaccins",
@@ -117,8 +117,8 @@ const questions = [
       {
         text: "Composition des vaccins COVID (Pfizer, Moderna, Astrazeneca...)",
         url: "https://www.mesvaccins.net/web/vaccines?utf8=%E2%9C%93&name_or_disease=vaccine&search-by-name=covid&search-by-disease=&commit=Chercher&search-by-age=&age_unit=ans",
-      }
-    ]
+      },
+    ],
   },
   {
     text: "Nous n'avons pas de recul sur les vaccins à ARN messager",
@@ -129,8 +129,8 @@ const questions = [
       {
         text: "Page Wikipedia des vaccins à ARNm",
         url: "https://fr.wikipedia.org/wiki/Vaccin_%C3%A0_ARN",
-      }
-    ]
+      },
+    ],
   },
   {
     text: "Il n'y a pas eu d'essai clinique ou ils ont été raccourcis. Le vaccin est sorti très vite.",
@@ -141,11 +141,11 @@ const questions = [
       {
         text: "Les raisons d'un vaccin en temps record",
         url: "https://www.quechoisir.org/actualite-covid-19-les-raisons-d-un-vaccin-en-temps-record-n86767/",
-        author: "Que choisir"
-      }
-    ]
-  }
-]
+        author: "Que choisir",
+      },
+    ],
+  },
+];
 
 // markup
 const IndexPage = () => {
@@ -158,13 +158,19 @@ const IndexPage = () => {
       <h1 style={headingStyles}>
         J'ai peur du vaccin COVID
         <br />
-        <span style={headingAccentStyles}>Il est normal et sain d'avoir des doûtes</span>
+        <span style={headingAccentStyles}>
+          Il est normal et sain d'avoir des doûtes
+        </span>
       </h1>
       <p style={paragraphStyles}>
-      Dans le climat de crise actuel, la multiplication des sources d'informations, souvent contradictoires, pas claires, ou parfois fausses n'améliore pas la situation. Cette page vise à regrouper les différentes ressources apportant des réponses scientifiques à des questions légitimes.
+        Dans le climat de crise actuel, la multiplication des sources
+        d'informations, souvent contradictoires, pas claires, ou parfois fausses
+        n'améliore pas la situation. Cette page vise à regrouper les différentes
+        ressources apportant des réponses scientifiques à des questions
+        légitimes.
       </p>
       <ul style={listStyles}>
-        {questions.map(q => (
+        {questions.map((q) => (
           <li key={q.text} style={{ ...listItemStyles, color: q.color }}>
             <span>
               {q.text}
@@ -176,20 +182,49 @@ const IndexPage = () => {
               <p style={descriptionStyle}>{q.description}</p>
               <h5>Source{q.sources?.length > 1 && "s"} :</h5>
               <ul>
-                  {q.sources.map(s => (
-                    <li key="s.url"><a style={linkStyle} href={s.url} target="_blank" rel="noreferrer">{s.text}</a>{s.author && (<span style={sourceStyle}>({s.author})</span>)}</li>
-                  ))}
-            </ul>
+                {q.sources.map((s) => (
+                  <li key="s.url">
+                    <a
+                      style={linkStyle}
+                      href={s.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {s.text}
+                    </a>
+                    {s.author && <span style={sourceStyle}>({s.author})</span>}
+                  </li>
+                ))}
+              </ul>
             </span>
           </li>
         ))}
       </ul>
-      <p>Ce site est apolitique : il n'a aucun lien avec un parti politique et/ou le gouvernement de quelque pays que ce soit.</p>
+      <p>
+        Ce site est apolitique : il n'a aucun lien avec un parti politique et/ou
+        le gouvernement de quelque pays que ce soit.
+      </p>
       <p style={paragraphStyles}>
-        En cas d'erreur, de problème, ou si vous pensez qu'une ressource manque, n'hésitez pas à participer à ce site via le <a href="https://github.com/PofMagicfingers/j-ai-peur-du-vaccin" target="_blank" rel="noreferrer">projet GitHub</a> ou en envoyant un mail à <a href="mailto:contact@jaipeurduvaccin.fr" target="_blank" rel="noreferrer">contact@jaipeurduvaccin.fr</a>
+        En cas d'erreur, de problème, ou si vous pensez qu'une ressource manque,
+        n'hésitez pas à participer à ce site via le{" "}
+        <a
+          href="https://github.com/PofMagicfingers/j-ai-peur-du-vaccin"
+          target="_blank"
+          rel="noreferrer"
+        >
+          projet GitHub
+        </a>{" "}
+        ou en envoyant un mail à{" "}
+        <a
+          href="mailto:contact@jaipeurduvaccin.fr"
+          target="_blank"
+          rel="noreferrer"
+        >
+          contact@jaipeurduvaccin.fr
+        </a>
       </p>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
