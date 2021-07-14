@@ -28,7 +28,7 @@ const paragraphStyles = {
 };
 
 const listStyles = {
-  marginBottom: 96,
+  marginBottom: 72,
   paddingLeft: 0,
 };
 
@@ -73,6 +73,11 @@ const badgeStyle = {
 const sourceStyle = {
   marginLeft: 10,
   fontSize: 12,
+};
+
+const autresResStyle = {
+  marginBottom: 72,
+  paddingLeft: 0,
 };
 
 // data
@@ -147,6 +152,19 @@ const questions = [
   },
 ];
 
+const autresRessources = [
+  {
+    text: "Dix doutes légitimes sur la vaccination",
+    url: "https://www.letemps.ch/sciences/dix-doutes-legitimes-vaccination-zero-bonne-raison-ne-y-aller",
+    author: "Le Temps",
+  },
+  {
+    text: "Est-ce que je vais me faire vacciner ?",
+    url: "https://www.youtube.com/watch?v=GBzJ77y8Bho",
+    author: "Cyrus North",
+  },
+];
+
 // markup
 const IndexPage = () => {
   const title = "J'ai peur du vaccin COVID-19";
@@ -200,29 +218,56 @@ const IndexPage = () => {
           </li>
         ))}
       </ul>
-      <p>
-        Ce site est apolitique : il n'a aucun lien avec un parti politique et/ou
-        le gouvernement de quelque pays que ce soit.
-      </p>
-      <p style={paragraphStyles}>
-        En cas d'erreur, de problème, ou si vous pensez qu'une ressource manque,
-        n'hésitez pas à participer à ce site via le{" "}
-        <a
-          href="https://github.com/PofMagicfingers/j-ai-peur-du-vaccin"
-          target="_blank"
-          rel="noreferrer"
-        >
-          projet GitHub
-        </a>{" "}
-        ou en envoyant un mail à{" "}
-        <a
-          href="mailto:contact@jaipeurduvaccin.fr"
-          target="_blank"
-          rel="noreferrer"
-        >
-          contact@jaipeurduvaccin.fr
-        </a>
-      </p>
+      <section style={autresResStyle}>
+        <h4>Autres ressources</h4>
+        <p>
+          Les liens suivants sont des ressources, pages web, articles, vidéos
+          qui regroupent des réponses à plusieurs des questions cités
+          précedemment, ou qui partagent leur vision plus généraliste sur la
+          vaccination.
+        </p>
+        <ul>
+          {autresRessources.map((s) => (
+            <li key="s.url">
+              <a
+                style={linkStyle}
+                href={s.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {s.text}
+              </a>
+              {s.author && <span style={sourceStyle}>({s.author})</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section>
+        <h4>À propos</h4>
+        <p>
+          Ce site est apolitique : il n'a aucun lien avec un parti politique
+          et/ou le gouvernement de quelque pays que ce soit.
+        </p>
+        <p style={paragraphStyles}>
+          En cas d'erreur, de problème, ou si vous pensez qu'une ressource
+          manque, n'hésitez pas à participer à ce site via le{" "}
+          <a
+            href="https://github.com/PofMagicfingers/j-ai-peur-du-vaccin"
+            target="_blank"
+            rel="noreferrer"
+          >
+            projet GitHub
+          </a>{" "}
+          ou en envoyant un mail à{" "}
+          <a
+            href="mailto:contact@jaipeurduvaccin.fr"
+            target="_blank"
+            rel="noreferrer"
+          >
+            contact@jaipeurduvaccin.fr
+          </a>
+        </p>
+      </section>
     </Layout>
   );
 };
