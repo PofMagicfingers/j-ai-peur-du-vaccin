@@ -1,37 +1,40 @@
 import * as React from "react"
 
+import Layout from "../components/layout"
+
 // styles
 const pageStyles = {
   color: "#232129",
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  maxWidth: 720,
+    margin: "auto"
 }
+
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
-  maxWidth: 320,
+  maxWidth: 720,
 }
+
 const headingAccentStyles = {
   color: "#663399",
 }
+
 const paragraphStyles = {
   marginBottom: 48,
+  maxWidth: 720,
 }
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+
 const listStyles = {
   marginBottom: 96,
   paddingLeft: 0,
 }
+
 const listItemStyles = {
   fontWeight: 300,
   fontSize: 24,
-  maxWidth: 560,
+  maxWidth: 720,
   marginBottom: 30,
 }
 
@@ -42,24 +45,12 @@ const linkStyle = {
   verticalAlign: "5%",
 }
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
 const descriptionStyle = {
   color: "#232129",
   fontSize: 14,
   marginTop: 10,
   marginBottom: 0,
   lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
 }
 
 const badgeStyle = {
@@ -81,79 +72,55 @@ const badgeStyle = {
 // data
 const links = [
   {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
+    text: "Je m'inquiète pour la balance bénéfice risque",
+    url: "https://cress-umr1153.fr/covid_vaccines/",
     description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
+      "Les vaccins COVID bien qu'ayant des effets secondaires, présentent moins de risque d'effets graves sur la santé qu'attraper le COVID. Cette page permet de comparer les risques selon si l'ont est vacciné ou non, son age, et son vaccin.",
     color: "#E95800",
   },
   {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
+    text: "Le vaccin n'empêche pas d'attraper ou de transmettre le COVID",
+    url: "https://www.francetvinfo.fr/sante/maladie/coronavirus/vaccin/covid-19-a-quel-point-la-vaccination-freine-t-elle-la-transmission-du-virus_4690869.html",
     description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
+      "C'est vrai, néanmoins il réduit énormément la charge virale. C'est à dire le nombre de copie du virus dans l'organisme. Cela réduit les chances de contracter une forme symptomatique ou graves à des valeurs très faible. Par ailleurs une charge virale faible réduit les risques de transmissions à un chiffre ridiculement bas.",
     color: "#1099A8",
   },
   {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
+    text: "Je ne suis pas sûr du contenu des vaccins",
+    url: "https://www.mesvaccins.net/web/vaccines?utf8=%E2%9C%93&name_or_disease=vaccine&search-by-name=covid&search-by-disease=&commit=Chercher&search-by-age=&age_unit=ans",
     description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
+      "Les compositions du vaccins COVID sont librement accessibles sur internet. C'est leur procédé de fabrication qui reste un secret industriel.",
     color: "#BC027F",
   },
   {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
+    text: "Nous n'avons pas de recul sur les vaccins à ARN messager",
+    url: "https://fr.wikipedia.org/wiki/Vaccin_%C3%A0_ARN",
     description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
+      "Nous n'avons effectivement pas de recul à long terme sur le procédé, mais c'est aussi le cas de quasiment tous les vaccins et médicaments au moment de leur mise sur le marché. Les effets secondaires à long terme sont évalués après la mise sur le marché d'un médicament ou d'un vaccin. Une surveillance longue est mise en place une fois le vaccin/médicament distribué à large échelle. Par ailleurs, la technologie des vaccins à ARN messager est en étude depuis près de 30 ans et nous avons une certaine connaissance de son fonctionnement, même si nous n'avons que quelques vaccins sur le marché, produits avec ce procédé depuis 2018, et d'autres en phase d'essai (vaccins antirabique, antigrippal et anticancéreux notamment).",
     color: "#0D96F2",
   },
   {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
+    text: "Il n'y a pas eu d'essai clinique ou ils ont été raccourcis. Le vaccin est sorti très vite.",
+    url: "https://www.quechoisir.org/actualite-covid-19-les-raisons-d-un-vaccin-en-temps-record-n86767/",
     description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
+      "Pour répondre à la crise du COVID-19, de nombreux labo, donateurs, et gouvernements ont débloqué énormement de ressources financières pour la recherche d'un vaccin. Des essais cliniques accelérés ont également été possibles grace à un nombre de volontaires exceptionnelement haut par rapports à des essais cliniques habituels. Le nombre de volontaires, la forte implication de toute la communauté scientifique et le déblocage de financement massifs ont permis la sortie rapide des vaccins.",
     color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
+  }
 ]
 
 // markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
+    <Layout style={pageStyles} pageTitle="Home Page">
       <h1 style={headingStyles}>
-        Congratulations
+        J'ai peur du vaccin COVID
         <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
+        <span style={headingAccentStyles}>Il est normal et sain d'avoir des doûtes</span>
       </h1>
       <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
+      Dans le climat de crise actuel, la multiplication des sources d'informations, souvent contradictoires, pas claires, ou parfois fausses n'améliore pas la situation. Cette page vise à regrouper les différentes ressources apportant des réponses scientifiques à des questions légitimes.
       </p>
       <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
         {links.map(link => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
@@ -164,8 +131,8 @@ const IndexPage = () => {
                 {link.text}
               </a>
               {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
+                <span style={badgeStyle} aria-label="Nouvelle ressource">
+                  Nouveau !
                 </span>
               )}
               <p style={descriptionStyle}>{link.description}</p>
@@ -173,11 +140,11 @@ const IndexPage = () => {
           </li>
         ))}
       </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+      <p style={paragraphStyles}>
+        En cas d'erreur, de problèmes, ou si vous pensez qu'une ressource manque, n'hésitez pas à participer à ce site via le <a href="https://github.com/PofMagicfingers/j-ai-peur-du-vaccin" target="_blank" rel="noreferrer">projet GitHub</a> ou en envoyant un mail à <a href="mailto:contact@jaipeurduvaccin.fr">contact@jaipeurduvaccin.fr</a>
+      </p>
+      <p>Ce site est apolitique : il n'a aucun lien avec un parti politique et/ou le gourvernement de quelque pays que ce soit.</p>
+    </Layout>
   )
 }
 
