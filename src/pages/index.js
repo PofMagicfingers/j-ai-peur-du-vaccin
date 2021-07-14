@@ -6,7 +6,7 @@ import SEO from "../components/seo";
 // styles
 const pageStyles = {
   color: "#232129",
-  padding: 96,
+  padding: "2vh 8vw",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
   maxWidth: 720,
   margin: "auto",
