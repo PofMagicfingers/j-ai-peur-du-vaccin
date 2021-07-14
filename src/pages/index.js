@@ -1,6 +1,7 @@
 import * as React from "react"
 
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 // styles
 const pageStyles = {
@@ -8,7 +9,7 @@ const pageStyles = {
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
   maxWidth: 720,
-    margin: "auto"
+  margin: "auto"
 }
 
 const headingStyles = {
@@ -75,14 +76,14 @@ const links = [
     text: "Je m'inquiète pour la balance bénéfice risque",
     url: "https://cress-umr1153.fr/covid_vaccines/",
     description:
-      "Les vaccins COVID bien qu'ayant des effets secondaires, présentent moins de risque d'effets graves sur la santé qu'attraper le COVID. Cette page permet de comparer les risques selon si l'ont est vacciné ou non, son age, et son vaccin.",
+      "Les vaccins COVID, bien qu'ayant des effets secondaires, présentent moins de risque d'effets sur la santé que le COVID. Cette page permet de comparer les risques selon si l'on est vacciné(e) ou non, son âge, et son vaccin.",
     color: "#E95800",
   },
   {
     text: "Le vaccin n'empêche pas d'attraper ou de transmettre le COVID",
     url: "https://www.francetvinfo.fr/sante/maladie/coronavirus/vaccin/covid-19-a-quel-point-la-vaccination-freine-t-elle-la-transmission-du-virus_4690869.html",
     description:
-      "C'est vrai, néanmoins il réduit énormément la charge virale. C'est à dire le nombre de copie du virus dans l'organisme. Cela réduit les chances de contracter une forme symptomatique ou graves à des valeurs très faible. Par ailleurs une charge virale faible réduit les risques de transmissions à un chiffre ridiculement bas.",
+      "C'est vrai, néanmoins il réduit énormément la charge virale, c'est à dire le nombre de copie du virus dans l'organisme. Cela réduit les chances de contracter une forme symptomatique ou grave de la maladie, et une charge virale faible réduit quasiment à zero, les risques de transmissions à une autre personne vaccinée ou non.",
     color: "#1099A8",
   },
   {
@@ -103,15 +104,19 @@ const links = [
     text: "Il n'y a pas eu d'essai clinique ou ils ont été raccourcis. Le vaccin est sorti très vite.",
     url: "https://www.quechoisir.org/actualite-covid-19-les-raisons-d-un-vaccin-en-temps-record-n86767/",
     description:
-      "Pour répondre à la crise du COVID-19, de nombreux labo, donateurs, et gouvernements ont débloqué énormement de ressources financières pour la recherche d'un vaccin. Des essais cliniques accelérés ont également été possibles grace à un nombre de volontaires exceptionnelement haut par rapports à des essais cliniques habituels. Le nombre de volontaires, la forte implication de toute la communauté scientifique et le déblocage de financement massifs ont permis la sortie rapide des vaccins.",
+      "Pour répondre à la crise du COVID-19, de nombreux labo, donateurs, et gouvernements ont débloqué énormement de ressources financières pour la recherche d'un vaccin. Des essais cliniques accelérés ont également été possibles grace à un nombre de volontaires exceptionnellement haut par rapport à des essais cliniques habituels. Le nombre de volontaires, la forte implication de toute la communauté scientifique et le déblocage de financements massifs ont permis la sortie rapide des vaccins.",
     color: "#8EB814",
   }
 ]
 
 // markup
 const IndexPage = () => {
+  const title = "J'ai peur du vaccin COVID-19";
+
   return (
-    <Layout style={pageStyles} pageTitle="Home Page">
+    <Layout style={pageStyles} pageTitle={title}>
+      <SEO title={title} />
+
       <h1 style={headingStyles}>
         J'ai peur du vaccin COVID
         <br />
@@ -126,7 +131,7 @@ const IndexPage = () => {
             <span>
               <a
                 style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+                href={link.url}
               >
                 {link.text}
               </a>
@@ -140,10 +145,10 @@ const IndexPage = () => {
           </li>
         ))}
       </ul>
+      <p>Ce site est apolitique : il n'a aucun lien avec un parti politique et/ou le gouvernement de quelque pays que ce soit.</p>
       <p style={paragraphStyles}>
-        En cas d'erreur, de problèmes, ou si vous pensez qu'une ressource manque, n'hésitez pas à participer à ce site via le <a href="https://github.com/PofMagicfingers/j-ai-peur-du-vaccin" target="_blank" rel="noreferrer">projet GitHub</a> ou en envoyant un mail à <a href="mailto:contact@jaipeurduvaccin.fr">contact@jaipeurduvaccin.fr</a>
+        En cas d'erreur, de problème, ou si vous pensez qu'une ressource manque, n'hésitez pas à participer à ce site via le <a href="https://github.com/PofMagicfingers/j-ai-peur-du-vaccin" target="_blank" rel="noreferrer">projet GitHub</a> ou en envoyant un mail à <a href="mailto:contact@jaipeurduvaccin.fr">contact@jaipeurduvaccin.fr</a>
       </p>
-      <p>Ce site est apolitique : il n'a aucun lien avec un parti politique et/ou le gourvernement de quelque pays que ce soit.</p>
     </Layout>
   )
 }
