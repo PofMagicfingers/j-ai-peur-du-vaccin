@@ -2,8 +2,9 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://jaipeurduvaccin.fr",
     title: "J'ai peur du vaccin",
-    description: "Cette page vise à regrouper les différentes ressources apportant des réponses scientifiques à des questions légitimes.",
-    author: "jaipeurduvaccin.fr"
+    description:
+      "Cette page vise à regrouper les différentes ressources apportant des réponses scientifiques à des questions légitimes.",
+    author: "jaipeurduvaccin.fr",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -39,6 +40,13 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-plugin-htaccess",
+      options: {
+        https: true,
+        host: "jaipeurduvaccin.fr",
+      },
     },
   ],
 };
