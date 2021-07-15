@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "gatsby";
 
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 
@@ -7,7 +6,7 @@ const darkTheme = {
   id: "dark",
   background: "#010101",
   text: "#FEFEFE",
-  accent: "#96c",
+  accent: "#B088D7",
 };
 
 const lightTheme = {
@@ -34,22 +33,6 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     border-bottom: 1px solid;
     }
-`;
-
-const navStyles = {};
-
-const navList = {
-  display: "inline-block",
-};
-
-const navLi = {
-  display: "inline-block",
-  listStyleType: "none",
-  marginRight: 10,
-};
-
-const StyledNavLink = styled(Link)`
-  color: ${({ theme }) => theme.text};
 `;
 
 const ThemeSwitcher = styled.button`
