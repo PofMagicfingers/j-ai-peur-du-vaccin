@@ -230,7 +230,6 @@ const IndexPage = () => {
                       style={linkStyle}
                       href={s.url}
                       target="_blank"
-                      rel="noreferrer"
                     >
                       {s.text}
                     </a>
@@ -261,7 +260,6 @@ const IndexPage = () => {
                 style={linkStyle}
                 href={s.url}
                 target="_blank"
-                rel="noreferrer"
               >
                 {s.text}
               </a>
@@ -274,19 +272,26 @@ const IndexPage = () => {
           ))}
         </ul>
       </section>
-      <section>
+      <section style={paragraphBlockStyles}>
+        <h4>Où se faire vacciner en France ?</h4>
+        <StyledParagraph>
+      Vous pouvez trouver un lieu de vaccination grâce au service <a href="https://vitemadose.covidtracker.fr/" target="_blank">Vite Ma Dose</a> qui permet de rechercher simultanément un RDV sur toutes les plateformes de réservation (Doctolib, Keldoc...).<br/>
+      <br/>
+      Pour plus d'informations sur les lieux et campagnes de vaccination, vous pouvez visiter cette page du site Ameli de l'Assurance Maladie : <a href="https://www.ameli.fr/assure/covid-19/vaccination-contre-la-covid-19/qui-peut-se-faire-vacciner-quand-et-comment" target="_blank">Qui peut se faire vacciner, quand et comment ?</a>
+        </StyledParagraph>
+      </section>
+      <section style={paragraphBlockStyles}>
         <h4>À propos</h4>
-        <StyledParagraph style={paragraphBlockStyles}>
+        <StyledParagraph>
           Ce site est apolitique : il n'a aucun lien avec un parti politique
           et/ou le gouvernement de quelque pays que ce soit.
         </StyledParagraph>
-        <StyledParagraph style={paragraphBlockStyles}>
+        <StyledParagraph>
           En cas d'erreur, de problème, ou si vous pensez qu'une ressource
           manque, n'hésitez pas à participer à ce site via le{" "}
           <a
             href="https://github.com/PofMagicfingers/j-ai-peur-du-vaccin"
             target="_blank"
-            rel="noreferrer"
           >
             projet GitHub
           </a>{" "}
@@ -294,7 +299,6 @@ const IndexPage = () => {
           <a
             href="mailto:contact@jaipeurduvaccin.fr"
             target="_blank"
-            rel="noreferrer"
           >
             contact@jaipeurduvaccin.fr
           </a>
