@@ -113,7 +113,7 @@ const questions = [
   {
     text: "Le vaccin n'empêche pas d'attraper ou de transmettre le COVID",
     description:
-      "C'est vrai, néanmoins il réduit énormément la charge virale, c'est à dire le nombre de copie du virus dans l'organisme. Cela réduit les chances de contracter une forme symptomatique ou grave de la maladie, et une charge virale faible réduit quasiment à zero, les risques de transmissions à une autre personne vaccinée ou non.",
+      "C'est vrai, néanmoins il réduit énormément la charge virale, c'est-à-dire le nombre de copies du virus dans l'organisme. Cela réduit les chances de contracter une forme symptomatique ou grave de la maladie, et une charge virale faible réduite quasiment à zéro, les risques de transmissions à une autre personne vaccinée ou non.",
     color: "#305154",
     StyledLi: styled(StyledLi)`
       color: ${({ theme }) => lighten(theme.id == "dark" ? 0.5 : 0, "#305154")};
@@ -129,6 +129,7 @@ const questions = [
   {
     text: "Je ne suis pas sûr du contenu des vaccins",
     description:
+      "Les compositions des vaccins COVID sont librement accessibles sur Internet. C'est leur procédé de fabrication qui reste un secret industriel.",
       "Les compositions du vaccins COVID sont librement accessibles sur internet. C'est leur procédé de fabrication qui reste un secret industriel.",
     color: "#A2026C",
     StyledLi: styled(StyledLi)`
@@ -151,7 +152,7 @@ const questions = [
     `,
     sources: [
       {
-        text: "Page Wikipedia des vaccins à ARNm",
+        text: "Page Wikipédia des vaccins à ARNm",
         url: "https://fr.wikipedia.org/wiki/Vaccin_%C3%A0_ARN",
       },
     ],
@@ -159,7 +160,7 @@ const questions = [
   {
     text: "Il n'y a pas eu d'essai clinique ou ils ont été raccourcis. Le vaccin est sorti très vite.",
     description:
-      "Pour répondre à la crise du COVID-19, de nombreux labo, donateurs, et gouvernements ont débloqué énormement de ressources financières pour la recherche d'un vaccin. Des essais cliniques accelérés ont également été possibles grace à un nombre de volontaires exceptionnellement haut par rapport à des essais cliniques habituels. Le nombre de volontaires, la forte implication de toute la communauté scientifique et le déblocage de financements massifs ont permis la sortie rapide des vaccins.",
+      "Pour répondre à la crise du COVID-19, de nombreux labos, donateurs, et gouvernements ont débloqué énormément de ressources financières pour la recherche d'un vaccin. Des essais cliniques accélérés ont également été possibles grâce à un nombre de volontaires exceptionnellement haut par rapport à des essais cliniques habituelles. Le nombre de volontaires, la forte implication de toute la communauté scientifique et le déblocage de financements massifs ont permis la sortie rapide des vaccins.",
     color: "#4D5C00",
     StyledLi: styled(StyledLi)`
       color: ${({ theme }) => lighten(theme.id == "dark" ? 0.5 : 0, "#4D5C00")};
@@ -251,7 +252,7 @@ const IndexPage = () => {
         <StyledParagraph>
           Les liens suivants sont des ressources, pages web, articles, vidéos
           qui regroupent des réponses à plusieurs des questions cités
-          précedemment, ou qui partagent leur vision plus généraliste sur la
+          précédemment, ou qui partagent leur vision plus généraliste sur la
           vaccination.
         </StyledParagraph>
         <ul>
