@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import GlobalStyle from "./globalStyle";
 
 const darkTheme = {
   id: "dark",
@@ -15,25 +16,6 @@ const lightTheme = {
   text: darkTheme.background,
   accent: "#663399",
 };
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: ${({ theme }) => theme.background};
-    color: ${({ theme }) => theme.text};
-    font-family: Open Sans, Lato, Roboto, sans-serif;
-  }
-
-    a, a:link, a:visited {
-    color: ${({ theme }) => theme.accent};
-    text-decoration: none;
-    border-bottom: 1px dashed;
-    }
-
-    a:hover, a:focus {
-    text-decoration: none;
-    border-bottom: 1px solid;
-    }
-`;
 
 const ThemeSwitcher = styled.button`
   font-size: 16px;
