@@ -1,13 +1,15 @@
-import * as React from "react";
+import React from "react";
+
+import styled from "styled-components";
+
+import { lighten } from "polished";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 // styles
 const pageStyles = {
-  color: "#232129",
   padding: "2vh 8vw",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
   maxWidth: 720,
   margin: "auto",
 };
@@ -18,11 +20,11 @@ const headingStyles = {
   maxWidth: 720,
 };
 
-const headingAccentStyles = {
-  color: "#663399",
-};
+const HeadingAccent = styled.span`
+  color: ${({ theme }) => theme.accent};
+`;
 
-const paragraphStyles = {
+const paragraphBlockStyles = {
   marginBottom: 48,
   maxWidth: 720,
 };
@@ -32,33 +34,33 @@ const listStyles = {
   paddingLeft: 0,
 };
 
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 18,
-  maxWidth: 720,
-  marginBottom: 30,
-};
+const StyledLi = styled.li`
+  font-size: 21px;
+  max-width: 720px;
+  margin-bottom: 30px;
+  font-weight: 300;
+`;
 
 const linkStyle = {
   color: "#8954A8",
   fontWeight: "bold",
-  fontSize: 16,
+  fontSize: 19,
   verticalAlign: "5%",
 };
 
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-};
+const StyledParagraph = styled.p`
+  color: ${({ theme }) => theme.text};
+  font-size: 17px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  line-height: 1.5em;
+`;
 
 const badgeStyle = {
   color: "#fff",
   backgroundColor: "#088413",
   border: "1px solid #088413",
-  fontSize: 11,
+  fontSize: 14,
   fontWeight: "bold",
   letterSpacing: 1,
   borderRadius: 4,
@@ -71,8 +73,13 @@ const badgeStyle = {
 };
 
 const sourceStyle = {
-  marginLeft: 10,
-  fontSize: 12,
+  marginTop: 10,
+};
+
+const sourceAuthorStyle = {
+  marginTop: 4,
+  marginLeft: 4,
+  fontSize: 15,
 };
 
 const autresResStyle = {
@@ -86,7 +93,10 @@ const questions = [
     text: "Je m'inquiète pour la balance bénéfice risque",
     description:
       "Les vaccins COVID, bien qu'ayant des effets secondaires, présentent moins de risque d'effets sur la santé que le COVID, peut importe son âge ou le vaccin utilisé.",
-    color: "#E95800",
+    color: "#993B00",
+    StyledLi: styled(StyledLi)`
+      color: ${({ theme }) => lighten(theme.id == "dark" ? 0.5 : 0, "#993B00")};
+    `,
     sources: [
       {
         text: "Page interactive de calcul balance bénéfice risques",
@@ -104,7 +114,10 @@ const questions = [
     text: "Le vaccin n'empêche pas d'attraper ou de transmettre le COVID",
     description:
       "C'est vrai, néanmoins il réduit énormément la charge virale, c'est à dire le nombre de copie du virus dans l'organisme. Cela réduit les chances de contracter une forme symptomatique ou grave de la maladie, et une charge virale faible réduit quasiment à zero, les risques de transmissions à une autre personne vaccinée ou non.",
-    color: "#1099A8",
+    color: "#305154",
+    StyledLi: styled(StyledLi)`
+      color: ${({ theme }) => lighten(theme.id == "dark" ? 0.5 : 0, "#305154")};
+    `,
     sources: [
       {
         text: "A quel point la vaccination freine-t-elle la transmission du COVID ?",
@@ -117,7 +130,10 @@ const questions = [
     text: "Je ne suis pas sûr du contenu des vaccins",
     description:
       "Les compositions du vaccins COVID sont librement accessibles sur internet. C'est leur procédé de fabrication qui reste un secret industriel.",
-    color: "#BC027F",
+    color: "#A2026C",
+    StyledLi: styled(StyledLi)`
+      color: ${({ theme }) => lighten(theme.id == "dark" ? 0.5 : 0, "#A2026C")};
+    `,
     sources: [
       {
         text: "Composition des vaccins COVID (Pfizer, Moderna, Astrazeneca...)",
@@ -129,7 +145,10 @@ const questions = [
     text: "Nous n'avons pas de recul sur les vaccins à ARN messager",
     description:
       "Nous n'avons effectivement pas de recul à long terme sur le procédé, mais c'est aussi le cas de quasiment tous les vaccins et médicaments au moment de leur mise sur le marché. Les effets secondaires à long terme sont évalués après la mise sur le marché d'un médicament ou d'un vaccin. Une surveillance longue est mise en place une fois le vaccin/médicament distribué à large échelle. Par ailleurs, la technologie des vaccins à ARN messager est en étude depuis près de 30 ans et nous avons une certaine connaissance de son fonctionnement, même si nous n'avons que quelques vaccins sur le marché, produits avec ce procédé depuis 2018, et d'autres en phase d'essai (vaccins antirabique, antigrippal et anticancéreux notamment).",
-    color: "#0D96F2",
+    color: "#0B5A8E",
+    StyledLi: styled(StyledLi)`
+      color: ${({ theme }) => lighten(theme.id == "dark" ? 0.5 : 0, "#0B5A8E")};
+    `,
     sources: [
       {
         text: "Page Wikipedia des vaccins à ARNm",
@@ -141,7 +160,10 @@ const questions = [
     text: "Il n'y a pas eu d'essai clinique ou ils ont été raccourcis. Le vaccin est sorti très vite.",
     description:
       "Pour répondre à la crise du COVID-19, de nombreux labo, donateurs, et gouvernements ont débloqué énormement de ressources financières pour la recherche d'un vaccin. Des essais cliniques accelérés ont également été possibles grace à un nombre de volontaires exceptionnellement haut par rapport à des essais cliniques habituels. Le nombre de volontaires, la forte implication de toute la communauté scientifique et le déblocage de financements massifs ont permis la sortie rapide des vaccins.",
-    color: "#8EB814",
+    color: "#4D5C00",
+    StyledLi: styled(StyledLi)`
+      color: ${({ theme }) => lighten(theme.id == "dark" ? 0.5 : 0, "#4D5C00")};
+    `,
     sources: [
       {
         text: "Les raisons d'un vaccin en temps record",
@@ -169,6 +191,8 @@ const autresRessources = [
 const IndexPage = () => {
   const title = "J'ai peur du vaccin COVID-19";
 
+  console.log(questions);
+
   return (
     <Layout style={pageStyles} pageTitle={title}>
       <SEO title={title} />
@@ -176,32 +200,32 @@ const IndexPage = () => {
       <h1 style={headingStyles}>
         J'ai peur du vaccin COVID
         <br />
-        <span style={headingAccentStyles}>
-          Il est normal et sain d'avoir des doûtes
-        </span>
+        <HeadingAccent>Il est normal et sain d'avoir des doutes</HeadingAccent>
       </h1>
-      <p style={paragraphStyles}>
+      <StyledParagraph style={paragraphBlockStyles}>
         Dans le climat de crise actuel, la multiplication des sources
         d'informations, souvent contradictoires, pas claires, ou parfois fausses
         n'améliore pas la situation. Cette page vise à regrouper les différentes
         ressources apportant des réponses scientifiques à des questions
         légitimes.
-      </p>
+      </StyledParagraph>
       <ul style={listStyles}>
         {questions.map((q) => (
-          <li key={q.text} style={{ ...listItemStyles, color: q.color }}>
+          <q.StyledLi key={q.text}>
             <span>
-              {q.text}
-              {q.badge && (
-                <span style={badgeStyle} aria-label="Nouvelle ressource">
-                  Nouveau !
-                </span>
-              )}
-              <p style={descriptionStyle}>{q.description}</p>
+              <h5>
+                {q.text}
+                {q.badge && (
+                  <span style={badgeStyle} aria-label="Nouvelle ressource">
+                    Nouveau !
+                  </span>
+                )}
+              </h5>
+              <StyledParagraph>{q.description}</StyledParagraph>
               <h5>Source{q.sources?.length > 1 && "s"} :</h5>
               <ul>
                 {q.sources.map((s) => (
-                  <li key="s.url">
+                  <li key={`${s.text}_${s.url}`} style={sourceStyle}>
                     <a
                       style={linkStyle}
                       href={s.url}
@@ -210,25 +234,29 @@ const IndexPage = () => {
                     >
                       {s.text}
                     </a>
-                    {s.author && <span style={sourceStyle}>({s.author})</span>}
+                    {s.author && (
+                      <div style={sourceAuthorStyle}>
+                        <span>{s.author}</span>
+                      </div>
+                    )}
                   </li>
                 ))}
               </ul>
             </span>
-          </li>
+          </q.StyledLi>
         ))}
       </ul>
       <section style={autresResStyle}>
         <h4>Autres ressources</h4>
-        <p>
+        <StyledParagraph>
           Les liens suivants sont des ressources, pages web, articles, vidéos
           qui regroupent des réponses à plusieurs des questions cités
           précedemment, ou qui partagent leur vision plus généraliste sur la
           vaccination.
-        </p>
+        </StyledParagraph>
         <ul>
           {autresRessources.map((s) => (
-            <li key="s.url">
+            <li key={`other_${s.url}`} style={sourceStyle}>
               <a
                 style={linkStyle}
                 href={s.url}
@@ -237,18 +265,22 @@ const IndexPage = () => {
               >
                 {s.text}
               </a>
-              {s.author && <span style={sourceStyle}>({s.author})</span>}
+              {s.author && (
+                <div style={sourceAuthorStyle}>
+                  <span>{s.author}</span>
+                </div>
+              )}
             </li>
           ))}
         </ul>
       </section>
       <section>
         <h4>À propos</h4>
-        <p>
+        <StyledParagraph style={paragraphBlockStyles}>
           Ce site est apolitique : il n'a aucun lien avec un parti politique
           et/ou le gouvernement de quelque pays que ce soit.
-        </p>
-        <p style={paragraphStyles}>
+        </StyledParagraph>
+        <StyledParagraph style={paragraphBlockStyles}>
           En cas d'erreur, de problème, ou si vous pensez qu'une ressource
           manque, n'hésitez pas à participer à ce site via le{" "}
           <a
@@ -266,7 +298,7 @@ const IndexPage = () => {
           >
             contact@jaipeurduvaccin.fr
           </a>
-        </p>
+        </StyledParagraph>
       </section>
     </Layout>
   );
