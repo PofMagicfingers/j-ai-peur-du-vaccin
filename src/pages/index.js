@@ -28,16 +28,6 @@ const HeadingAccent = styled.em`
   color: ${({ theme }) => theme.accent};
 `;
 
-const paragraphBlockStyles = {
-  marginBottom: 48,
-  maxWidth: 720,
-};
-
-const listStyles = {
-  marginBottom: 72,
-  paddingLeft: 0,
-};
-
 const StyledQuestion = styled.h2`
   font-size: 21px;
   margin-bottom: 30px;
@@ -57,10 +47,9 @@ const StyledDescription = styled(StyledParagraph)`
   font-weight: 300;
 `;
 
-const autresResStyle = {
-  marginBottom: 72,
-  paddingLeft: 0,
-};
+const StyledSection = styled.section`
+  margin-bottom: 72px;
+`;
 
 // data
 const questions = [
@@ -180,7 +169,7 @@ const IndexPage = () => {
         <HeadingAccent>Il est normal et sain d'avoir des doutes</HeadingAccent>
       </h1>
 
-      <StyledParagraph style={paragraphBlockStyles}>
+      <StyledParagraph>
         Dans le climat de crise actuel, la multiplication des sources
         d'informations, souvent contradictoires, pas claires, ou parfois fausses
         n'améliore pas la situation. Cette page vise à regrouper les différentes
@@ -188,7 +177,7 @@ const IndexPage = () => {
         légitimes.
       </StyledParagraph>
 
-      <section style={listStyles}>
+      <StyledSection>
         {questions.map(question => (
           <React.Fragment key={question.text}>
             <Separator />
@@ -209,9 +198,9 @@ const IndexPage = () => {
             />
           </React.Fragment>
         ))}
-      </section>
+      </StyledSection>
 
-      <section style={autresResStyle}>
+      <StyledSection>
         <h2>Autres ressources</h2>
 
         <StyledParagraph>
@@ -222,9 +211,9 @@ const IndexPage = () => {
         </StyledParagraph>
 
         <Sources content={autresRessources} />
-      </section>
+      </StyledSection>
 
-      <section style={paragraphBlockStyles}>
+      <StyledSection>
         <h2>Où se faire vacciner en France ?</h2>
 
         <StyledParagraph>
@@ -246,9 +235,9 @@ const IndexPage = () => {
             Qui peut se faire vacciner, quand et comment ?
           </a>
         </StyledParagraph>
-      </section>
+      </StyledSection>
 
-      <section style={paragraphBlockStyles}>
+      <StyledSection>
         <h2>À propos</h2>
 
         <StyledParagraph>
@@ -271,7 +260,7 @@ const IndexPage = () => {
             contact@jaipeurduvaccin.fr
           </a>
         </StyledParagraph>
-      </section>
+      </StyledSection>
     </Layout>
   );
 };
