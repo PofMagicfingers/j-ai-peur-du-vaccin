@@ -97,25 +97,25 @@ const Layout = ({ style, pageTitle, children }) => {
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <>
         <GlobalStyle />
-      <title>{pageTitle}</title>
-      <ThemeSwitcher onClick={toggleTheme}>
-      {isDarkTheme ? (
-          <>
-          <ThemeSwitcherIcon aria-label="Mode clair" role="img">
-          🌞
-          </ThemeSwitcherIcon>{" "}
-          Passer au thème clair
-          </>
-      ) : (
-          <>
-          <ThemeSwitcherIcon aria-label="Mode sombre" role="img">
-          🌜
-          </ThemeSwitcherIcon>{" "}
-          Passer au thème sombre
-          </>
-      )}
-      </ThemeSwitcher>
-        <main style={{...style, marginTop: 50}}>{children}</main>
+        <title>{pageTitle}</title>
+        <ThemeSwitcher onClick={toggleTheme}>
+          {isDarkTheme ? (
+            <>
+              <ThemeSwitcherIcon aria-label="Mode clair" role="img">
+                🌞
+              </ThemeSwitcherIcon>{" "}
+              Passer au thème clair
+            </>
+          ) : (
+            <>
+              <ThemeSwitcherIcon aria-label="Mode sombre" role="img">
+                🌜
+              </ThemeSwitcherIcon>{" "}
+              Passer au thème sombre
+            </>
+          )}
+        </ThemeSwitcher>
+        <main style={{ ...style, marginTop: 50 }}>{children}</main>
       </>
     </ThemeProvider>
   );

@@ -226,11 +226,7 @@ const IndexPage = () => {
               <ul>
                 {q.sources.map((s) => (
                   <li key={`${s.text}_${s.url}`} style={sourceStyle}>
-                    <a
-                      style={linkStyle}
-                      href={s.url}
-                      target="_blank"
-                    >
+                    <a style={linkStyle} href={s.url} target="_blank">
                       {s.text}
                     </a>
                     {s.author && (
@@ -256,11 +252,7 @@ const IndexPage = () => {
         <ul>
           {autresRessources.map((s) => (
             <li key={`other_${s.url}`} style={sourceStyle}>
-              <a
-                style={linkStyle}
-                href={s.url}
-                target="_blank"
-              >
+              <a style={linkStyle} href={s.url} target="_blank">
                 {s.text}
               </a>
               {s.author && (
@@ -275,9 +267,22 @@ const IndexPage = () => {
       <section style={paragraphBlockStyles}>
         <h4>Où se faire vacciner en France ?</h4>
         <StyledParagraph>
-      Vous pouvez trouver un lieu de vaccination grâce au service <a href="https://vitemadose.covidtracker.fr/" target="_blank">Vite Ma Dose</a> qui permet de rechercher simultanément un RDV sur toutes les plateformes de réservation (Doctolib, Keldoc...).<br/>
-      <br/>
-      Pour plus d'informations sur les lieux et campagnes de vaccination, vous pouvez visiter cette page du site Ameli de l'Assurance Maladie : <a href="https://www.ameli.fr/assure/covid-19/vaccination-contre-la-covid-19/qui-peut-se-faire-vacciner-quand-et-comment" target="_blank">Qui peut se faire vacciner, quand et comment ?</a>
+          Vous pouvez trouver un lieu de vaccination grâce au service{" "}
+          <a href="https://vitemadose.covidtracker.fr/" target="_blank">
+            Vite Ma Dose
+          </a>{" "}
+          qui permet de rechercher simultanément un RDV sur toutes les
+          plateformes de réservation (Doctolib, Keldoc...).
+          <br />
+          <br />
+          Pour plus d'informations sur les lieux et campagnes de vaccination,
+          vous pouvez visiter cette page du site Ameli de l'Assurance Maladie :{" "}
+          <a
+            href="https://www.ameli.fr/assure/covid-19/vaccination-contre-la-covid-19/qui-peut-se-faire-vacciner-quand-et-comment"
+            target="_blank"
+          >
+            Qui peut se faire vacciner, quand et comment ?
+          </a>
         </StyledParagraph>
       </section>
       <section style={paragraphBlockStyles}>
@@ -296,10 +301,7 @@ const IndexPage = () => {
             projet GitHub
           </a>{" "}
           ou en envoyant un mail à{" "}
-          <a
-            href="mailto:contact@jaipeurduvaccin.fr"
-            target="_blank"
-          >
+          <a href="mailto:contact@jaipeurduvaccin.fr" target="_blank">
             contact@jaipeurduvaccin.fr
           </a>
         </StyledParagraph>
