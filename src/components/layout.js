@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import styled, { ThemeProvider } from "styled-components";
 import GlobalStyle from "./globalStyle";
+import ThemeSwitcher from "./themeSwitcher";
 
 const darkTheme = {
   id: "dark",
@@ -16,24 +17,6 @@ const lightTheme = {
   text: darkTheme.background,
   accent: "#663399",
 };
-
-const ThemeSwitcher = styled.button`
-  font-size: 16px;
-  padding: 5px 10px;
-  font-weight: bold;
-  background-color: ${({ theme }) => theme.text};
-  color: ${({ theme }) => theme.background};
-  margin: 0 10px;
-  border-radius: 30px;
-
-  position: absolute;
-  top: 20px;
-  right: 20px;
-`;
-
-const ThemeSwitcherIcon = styled.span`
-  margin-right: 5px;
-`;
 
 const StyledMain = styled.main`
   padding: 2vh 8vw;
@@ -67,23 +50,8 @@ const Layout = ({ pageTitle, children }) => {
       <>
         <GlobalStyle />
         <title>{pageTitle}</title>
-        <ThemeSwitcher onClick={toggleTheme}>
-          {isDarkTheme ? (
-            <>
-              <ThemeSwitcherIcon aria-label="Mode clair" role="img">
-                🌞
-              </ThemeSwitcherIcon>{" "}
-              Passer au thème clair
-            </>
-          ) : (
-            <>
-              <ThemeSwitcherIcon aria-label="Mode sombre" role="img">
-                🌜
-              </ThemeSwitcherIcon>{" "}
-              Passer au thème sombre
-            </>
-          )}
-        </ThemeSwitcher>
+
+        <ThemeSwitcher dark={isDarkTheme} onClick={toggleTheme} />
 
         <StyledMain>{children}</StyledMain>
       </>
