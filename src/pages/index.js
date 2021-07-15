@@ -50,7 +50,7 @@ const IndexPage = () => {
 
   return (
     <Layout pageTitle={title}>
-      <SEO title={title} />
+      <SEO title={title} lang="fr" />
 
       <StyledH1>
         J'ai peur du vaccin COVID<br />
