@@ -35,10 +35,7 @@ const StyledParagraph = styled.p`
   margin-top: 10px;
   margin-bottom: 0;
   line-height: 1.5em;
-`;
-
-const StyledDescription = styled(StyledParagraph)`
-  font-weight: 300;
+  font-weight: ${({ light }) => light ? 300 : 400};
 `;
 
 const StyledSection = styled.section`
@@ -181,9 +178,9 @@ const IndexPage = () => {
               {question.badge && <Badge />}
             </StyledQuestion>
 
-            <StyledDescription>
+            <StyledParagraph light>
               {question.description}
-            </StyledDescription>
+            </StyledParagraph>
 
             <Sources
               color={question.color}
