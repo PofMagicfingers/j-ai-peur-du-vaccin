@@ -92,7 +92,7 @@ const questions = [
   {
     text: "Je m'inquiète pour la balance bénéfice risque",
     description:
-      "Les vaccins COVID, bien qu'ayant des effets secondaires, présentent moins de risque d'effets sur la santé que le COVID, peut importe son âge ou le vaccin utilisé.",
+      "Les vaccins COVID, bien qu'ayant des effets secondaires, présentent moins de risque d'effets sur la santé que le COVID, peu importe son âge ou le vaccin utilisé.",
     color: "#993B00",
     StyledLi: styled(StyledLi)`
       color: ${({ theme }) => lighten(theme.id == "dark" ? 0.5 : 0, "#993B00")};
@@ -130,7 +130,6 @@ const questions = [
     text: "Je ne suis pas sûr du contenu des vaccins",
     description:
       "Les compositions des vaccins COVID sont librement accessibles sur Internet. C'est leur procédé de fabrication qui reste un secret industriel.",
-      "Les compositions du vaccins COVID sont librement accessibles sur internet. C'est leur procédé de fabrication qui reste un secret industriel.",
     color: "#A2026C",
     StyledLi: styled(StyledLi)`
       color: ${({ theme }) => lighten(theme.id == "dark" ? 0.5 : 0, "#A2026C")};
@@ -145,7 +144,7 @@ const questions = [
   {
     text: "Nous n'avons pas de recul sur les vaccins à ARN messager",
     description:
-      "Nous n'avons effectivement pas de recul à long terme sur le procédé, mais c'est aussi le cas de quasiment tous les vaccins et médicaments au moment de leur mise sur le marché. Les effets secondaires à long terme sont évalués après la mise sur le marché d'un médicament ou d'un vaccin. Une surveillance longue est mise en place une fois le vaccin/médicament distribué à large échelle. Par ailleurs, la technologie des vaccins à ARN messager est en étude depuis près de 30 ans et nous avons une certaine connaissance de son fonctionnement, même si nous n'avons que quelques vaccins sur le marché, produits avec ce procédé depuis 2018, et d'autres en phase d'essai (vaccins antirabique, antigrippal et anticancéreux notamment).",
+      "Nous n'avons effectivement pas de recul à long terme sur le procédé, mais c'est aussi le cas de quasiment tous les vaccins et médicaments au moment de leur mise sur le marché. Les effets secondaires à long terme sont évalués après la mise sur le marché d'un médicament ou d'un vaccin. Une surveillance longue est mise en place une fois le vaccin/médicament distribué à large échelle. Par ailleurs, la technologie des vaccins à ARN messager est en étude depuis près de 30 ans et nous avons une certaine connaissance de son fonctionnement, même si nous n'avons que quelques vaccins sur le marché, produits avec ce procédé depuis 2018, et d'autres en phase d'essai (vaccins antirabiques, antigrippaux et anticancéreux notamment).",
     color: "#0B5A8E",
     StyledLi: styled(StyledLi)`
       color: ${({ theme }) => lighten(theme.id == "dark" ? 0.5 : 0, "#0B5A8E")};
