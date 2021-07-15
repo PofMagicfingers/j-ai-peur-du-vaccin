@@ -91,7 +91,7 @@ const questions = [
   {
     text: "Je m'inquiète pour la balance bénéfice risque",
     description:
-      "Les vaccins COVID, bien qu'ayant des effets secondaires, présentent moins de risque d'effets sur la santé que le COVID, peu importe son âge ou le vaccin utilisé.",
+      "Les vaccins COVID, bien qu'ayant des effets secondaires, présentent moins de risques d'effets sur la santé que le COVID, peu importe son âge ou le vaccin utilisé.",
     color: "#993B00",
     StyledLi: styled(StyledLi)`
       color: ${({ theme }) => lighten(theme.id == "dark" ? 0.5 : 0, "#993B00")};
@@ -112,7 +112,7 @@ const questions = [
   {
     text: "Le vaccin n'empêche pas d'attraper ou de transmettre le COVID",
     description:
-      "C'est vrai, néanmoins il réduit énormément la charge virale, c'est-à-dire le nombre de copies du virus dans l'organisme. Cela réduit les chances de contracter une forme symptomatique ou grave de la maladie, et une charge virale faible réduite quasiment à zéro, les risques de transmissions à une autre personne vaccinée ou non.",
+      "C'est vrai, néanmoins il réduit énormément la charge virale, c'est-à-dire le nombre de copies du virus dans l'organisme. Cela réduit fortement les chances de contracter une forme symptomatique ou grave de la maladie, et quasiment à zéro les risques de transmissions à une autre personne vaccinée ou non.",
     color: "#305154",
     StyledLi: styled(StyledLi)`
       color: ${({ theme }) => lighten(theme.id == "dark" ? 0.5 : 0, "#305154")};
@@ -189,8 +189,6 @@ const autresRessources = [
 // markup
 const IndexPage = () => {
   const title = "J'ai peur du vaccin COVID-19";
-
-  console.log(questions);
 
   return (
     <Layout style={pageStyles} pageTitle={title}>
