@@ -60,6 +60,12 @@ const ThemeSwitcher = styled.button`
   color: ${({ theme }) => theme.background};
   margin: 0 10px;
   border-radius: 30px;
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 `;
 
 const ThemeSwitcherIcon = styled.span`
@@ -91,34 +97,25 @@ const Layout = ({ style, pageTitle, children }) => {
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <>
         <GlobalStyle />
-        <title>{pageTitle}</title>
-        <nav style={navStyles}>
-          <ul style={navList}>
-            <li style={navLi}>
-              <StyledNavLink to="/">J'ai peur du vaccin</StyledNavLink>
-            </li>
-            <li style={navLi}>
-              <ThemeSwitcher onClick={toggleTheme}>
-                {isDarkTheme ? (
-                  <>
-                    <ThemeSwitcherIcon aria-label="Mode clair" role="img">
-                      🌞
-                    </ThemeSwitcherIcon>{" "}
-                    Passer au thème clair
-                  </>
-                ) : (
-                  <>
-                    <ThemeSwitcherIcon aria-label="Mode sombre" role="img">
-                      🌜
-                    </ThemeSwitcherIcon>{" "}
-                    Passer au thème sombre
-                  </>
-                )}
-              </ThemeSwitcher>
-            </li>
-          </ul>
-        </nav>
-        <main style={style}>{children}</main>
+      <title>{pageTitle}</title>
+      <ThemeSwitcher onClick={toggleTheme}>
+      {isDarkTheme ? (
+          <>
+          <ThemeSwitcherIcon aria-label="Mode clair" role="img">
+          🌞
+          </ThemeSwitcherIcon>{" "}
+          Passer au thème clair
+          </>
+      ) : (
+          <>
+          <ThemeSwitcherIcon aria-label="Mode sombre" role="img">
+          🌜
+          </ThemeSwitcherIcon>{" "}
+          Passer au thème sombre
+          </>
+      )}
+      </ThemeSwitcher>
+        <main style={{...style, marginTop: 50}}>{children}</main>
       </>
     </ThemeProvider>
   );
