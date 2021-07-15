@@ -11,12 +11,6 @@ import Sources from "../components/sources";
 import Separator from "../components/separator";
 
 // styles
-const pageStyles = {
-  padding: "2vh 8vw",
-  maxWidth: 720,
-  margin: "auto",
-};
-
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
@@ -161,7 +155,7 @@ const IndexPage = () => {
   const title = "J'ai peur du vaccin COVID-19";
 
   return (
-    <Layout style={pageStyles} pageTitle={title}>
+    <Layout pageTitle={title}>
       <SEO title={title} />
 
       <h1 style={headingStyles}>

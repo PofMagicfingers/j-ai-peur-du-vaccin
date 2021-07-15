@@ -47,15 +47,19 @@ const ThemeSwitcher = styled.button`
   position: absolute;
   top: 20px;
   right: 20px;
-}
-
 `;
 
 const ThemeSwitcherIcon = styled.span`
   margin-right: 5px;
 `;
 
-const Layout = ({ style, pageTitle, children }) => {
+const StyledMain = styled.main`
+  padding: 2vh 8vw;
+  max-width: 720px;
+  margin: 50px auto auto auto;
+`;
+
+const Layout = ({ pageTitle, children }) => {
   const [theme, setTheme] = useState("light");
   const isDarkTheme = theme === "dark";
 
@@ -98,7 +102,8 @@ const Layout = ({ style, pageTitle, children }) => {
             </>
           )}
         </ThemeSwitcher>
-        <main style={{ ...style, marginTop: 50 }}>{children}</main>
+
+        <StyledMain>{children}</StyledMain>
       </>
     </ThemeProvider>
   );
