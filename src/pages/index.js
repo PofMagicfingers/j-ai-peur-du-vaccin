@@ -23,7 +23,8 @@ const headingStyles = {
   maxWidth: 720,
 };
 
-const HeadingAccent = styled.span`
+const HeadingAccent = styled.em`
+  font-style: normal;
   color: ${({ theme }) => theme.accent};
 `;
 
