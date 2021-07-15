@@ -42,7 +42,6 @@ const StyledLi = styled.li`
 `;
 
 const linkStyle = {
-  color: "#8954A8",
   fontWeight: "bold",
   fontSize: 19,
   verticalAlign: "5%",
