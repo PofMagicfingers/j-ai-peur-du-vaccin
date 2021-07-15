@@ -11,11 +11,10 @@ import Sources from "../components/sources";
 import Separator from "../components/separator";
 
 // styles
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 720,
-};
+const StyledH1 = styled.h1`
+  margin-top: 0;
+  margin-bottom: 64px;
+`;
 
 const HeadingAccent = styled.em`
   font-style: normal;
@@ -155,10 +154,10 @@ const IndexPage = () => {
     <Layout pageTitle={title}>
       <SEO title={title} />
 
-      <h1 style={headingStyles}>
+      <StyledH1>
         J'ai peur du vaccin COVID<br />
         <HeadingAccent>Il est normal et sain d'avoir des doutes</HeadingAccent>
-      </h1>
+      </StyledH1>
 
       <StyledParagraph>
         Dans le climat de crise actuel, la multiplication des sources
