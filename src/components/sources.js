@@ -38,7 +38,7 @@ const Sources = ({ content = [], title = '', color = '#000' }) => (
     <Ul color={color}>
       {content.map(({ text, url, author, badge }) => (
         <Li key={text}>
-          <Link href={url} target="_blank">{text}</Link>
+          <Link href={url} target="_blank" rel="noopener">{text}</Link>
 
           {badge && (
             <Badge aria-label="Nouvelle ressource">
