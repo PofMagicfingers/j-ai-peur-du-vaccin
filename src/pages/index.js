@@ -59,11 +59,11 @@ const badgeStyle = {
   color: "#fff",
   backgroundColor: "#088413",
   border: "1px solid #088413",
-  fontSize: 14,
+  fontSize: 12,
   fontWeight: "bold",
   letterSpacing: 1,
   borderRadius: 4,
-  padding: "4px 6px",
+  padding: "2px 4px",
   display: "inline-block",
   position: "relative",
   top: -2,
@@ -184,6 +184,26 @@ const autresRessources = [
     url: "https://www.youtube.com/watch?v=GBzJ77y8Bho",
     author: "Cyrus North",
   },
+  {
+    text: "Covaxinfo",
+      url: "https://covaxinfo.fr/",
+      badge: true
+  },
+  {
+    text: "FAQ Vaccin COVID19 - Du Côté de la Science",
+      url: "https://ducotedelascience.org/faq-vaccin-covid19-vos-questions-et-nos-reponses/",
+      badge: true
+  },
+  {
+    text: "Adiós Corona",
+      url: "https://www.adioscorona.org/themes-questions/vaccins.html",
+      badge: true
+  },
+  {
+    text: "Vaccination info service",
+      url: "https://vaccination-info-service.fr/Les-maladies-et-leurs-vaccins/COVID-19",
+      badge: true
+  },
 ];
 
 // markup
@@ -252,6 +272,11 @@ const IndexPage = () => {
               <a style={linkStyle} href={s.url} target="_blank">
                 {s.text}
               </a>
+                {s.badge && (
+                  <span style={badgeStyle} aria-label="Nouvelle ressource">
+                    Nouveau !
+                  </span>
+                )}
               {s.author && (
                 <div style={sourceAuthorStyle}>
                   <span>{s.author}</span>
