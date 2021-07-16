@@ -93,7 +93,7 @@ const IndexPage = () => {
 
         <StyledParagraph>
           Les liens suivants sont des ressources, pages web, articles, vidéos
-          qui regroupent des réponses à plusieurs des questions cités
+          qui regroupent des réponses à plusieurs des questions citées
           précédemment, ou qui partagent leur vision plus généraliste sur la
           vaccination.
         </StyledParagraph>
