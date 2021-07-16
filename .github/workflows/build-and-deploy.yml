@@ -1,21 +1,22 @@
 on: push
-name: Build Gatsby Site
+name: Build et déploiement du site
 jobs:
   build:
-    name: Build Gatsby Site
+    name: Build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Build Gatsby Site
+    - name: Build Gatsby
       uses: jzweifel/gatsby-cli-github-action@master
       with:
         gatsby-arg: build
   deploy:
-    name: Deploy
+    name: Déploiement
     runs-on: ubuntu-latest
+    needs: build
     steps:
     - uses: actions/checkout@v2
-    - name: Upload ftp
+    - name: Envoi sur le FTP
       uses: sebastianpopp/ftp-action@releases/v2
       with:
         host: ${{ secrets.FTP_SERVER }}
