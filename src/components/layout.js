@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import GlobalStyle from "./globalStyle";
+import ThemeSwitcher from "./themeSwitcher";
 
 const darkTheme = {
   id: "dark",
@@ -16,46 +18,13 @@ const lightTheme = {
   accent: "#663399",
 };
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: ${({ theme }) => theme.background};
-    color: ${({ theme }) => theme.text};
-    font-family: Open Sans, Lato, Roboto, sans-serif;
-  }
-
-    a, a:link, a:visited {
-    color: ${({ theme }) => theme.accent};
-    text-decoration: none;
-    border-bottom: 1px dashed;
-    }
-
-    a:hover, a:focus {
-    text-decoration: none;
-    border-bottom: 1px solid;
-    }
+const StyledMain = styled.main`
+  padding: 2vh 8vw;
+  max-width: 720px;
+  margin: 50px auto auto auto;
 `;
 
-const ThemeSwitcher = styled.button`
-  font-size: 16px;
-  padding: 5px 10px;
-  font-weight: bold;
-  background-color: ${({ theme }) => theme.text};
-  color: ${({ theme }) => theme.background};
-  margin: 0 10px;
-  border-radius: 30px;
-
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-`;
-
-const ThemeSwitcherIcon = styled.span`
-  margin-right: 5px;
-`;
-
-const Layout = ({ style, pageTitle, children }) => {
+const Layout = ({ pageTitle, children }) => {
   const [theme, setTheme] = useState("light");
   const isDarkTheme = theme === "dark";
 
@@ -81,24 +50,10 @@ const Layout = ({ style, pageTitle, children }) => {
       <>
         <GlobalStyle />
         <title>{pageTitle}</title>
-        <ThemeSwitcher onClick={toggleTheme}>
-          {isDarkTheme ? (
-            <>
-              <ThemeSwitcherIcon aria-label="Mode clair" role="img">
-                🌞
-              </ThemeSwitcherIcon>{" "}
-              Passer au thème clair
-            </>
-          ) : (
-            <>
-              <ThemeSwitcherIcon aria-label="Mode sombre" role="img">
-                🌜
-              </ThemeSwitcherIcon>{" "}
-              Passer au thème sombre
-            </>
-          )}
-        </ThemeSwitcher>
-        <main style={{ ...style, marginTop: 50 }}>{children}</main>
+
+        <ThemeSwitcher dark={isDarkTheme} onClick={toggleTheme} />
+
+        <StyledMain>{children}</StyledMain>
       </>
     </ThemeProvider>
   );
