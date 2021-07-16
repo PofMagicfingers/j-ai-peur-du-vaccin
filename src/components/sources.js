@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 
 import styled from "styled-components";
 
 import { lighten } from "polished";
-import Badge from './badge';
+import Badge from "./badge";
 
 const Title = styled.h3`
-  color: ${({ theme, color }) => theme.id !== 'dark' ? color : lighten(0.5, color)};
+  color: ${({ theme, color }) =>
+    theme.id !== "dark" ? color : lighten(0.5, color)};
 `;
 
 const Link = styled.a`
@@ -16,7 +17,8 @@ const Link = styled.a`
 `;
 
 const Ul = styled.ul`
-  color: ${({ theme, color }) => theme.id !== 'dark' ? color : lighten(0.5, color)};
+  color: ${({ theme, color }) =>
+    theme.id !== "dark" ? color : lighten(0.5, color)};
 `;
 
 const Li = styled.li`
@@ -31,20 +33,18 @@ const Author = styled.div`
   font-size: 15px;
 `;
 
-const Sources = ({ content = [], title = '', color = '#000' }) => (
+const Sources = ({ content = [], title = "", color = "#000" }) => (
   <>
     {title && <Title color={color}>{title} :</Title>}
 
     <Ul color={color}>
       {content.map(({ text, url, author, badge }) => (
         <Li key={text}>
-          <Link href={url} target="_blank" rel="noopener">{text}</Link>
+          <Link href={url} target="_blank" rel="noopener">
+            {text}
+          </Link>
 
-          {badge && (
-            <Badge aria-label="Nouvelle ressource">
-              Nouveau !
-            </Badge>
-          )}
+          {badge && <Badge aria-label="Nouvelle ressource">Nouveau !</Badge>}
 
           {author && <Author>{author}</Author>}
         </Li>

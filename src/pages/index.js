@@ -10,8 +10,8 @@ import Badge from "../components/badge";
 import Sources from "../components/sources";
 import Separator from "../components/separator";
 
-import questions from '../data/questions.json';
-import autresRessources from '../data/ressources.json';
+import questions from "../data/questions.json";
+import autresRessources from "../data/ressources.json";
 
 // styles
 const StyledH1 = styled.h1`
@@ -28,7 +28,8 @@ const StyledQuestion = styled.h2`
   font-size: 21px;
   margin-bottom: 30px;
   font-weight: 700;
-  color: ${({ color, theme }) => (theme.id !== 'dark' ? color : lighten(0.5, color))};
+  color: ${({ color, theme }) =>
+    theme.id !== "dark" ? color : lighten(0.5, color)};
 `;
 
 const StyledParagraph = styled.p`
@@ -37,7 +38,7 @@ const StyledParagraph = styled.p`
   margin-top: 10px;
   margin-bottom: 0;
   line-height: 1.5em;
-  font-weight: ${({ light }) => light ? 300 : 400};
+  font-weight: ${({ light }) => (light ? 300 : 400)};
 `;
 
 const StyledSection = styled.section`
@@ -53,7 +54,8 @@ const IndexPage = () => {
       <SEO title={title} lang="fr" />
 
       <StyledH1>
-        J'ai peur du vaccin COVID<br />
+        J'ai peur du vaccin COVID
+        <br />
         <HeadingAccent>Il est normal et sain d'avoir des doutes</HeadingAccent>
       </StyledH1>
 
@@ -66,7 +68,7 @@ const IndexPage = () => {
       </StyledParagraph>
 
       <StyledSection>
-        {questions.map(question => (
+        {questions.map((question) => (
           <React.Fragment key={question.text}>
             <Separator />
 
@@ -75,14 +77,12 @@ const IndexPage = () => {
               {question.badge && <Badge />}
             </StyledQuestion>
 
-            <StyledParagraph light>
-              {question.description}
-            </StyledParagraph>
+            <StyledParagraph light>{question.description}</StyledParagraph>
 
             <Sources
               color={question.color}
               content={question.sources}
-              title={`Source${question.sources?.length > 1 ? 's' : ''}`}
+              title={`Source${question.sources?.length > 1 ? "s" : ""}`}
             />
           </React.Fragment>
         ))}
@@ -106,7 +106,11 @@ const IndexPage = () => {
 
         <StyledParagraph>
           Vous pouvez trouver un lieu de vaccination grâce au service{" "}
-          <a href="https://vitemadose.covidtracker.fr/" target="_blank" rel="noopener">
+          <a
+            href="https://vitemadose.covidtracker.fr/"
+            target="_blank"
+            rel="noopener"
+          >
             Vite Ma Dose
           </a>{" "}
           qui permet de rechercher simultanément un RDV sur toutes les
@@ -144,7 +148,11 @@ const IndexPage = () => {
             projet GitHub
           </a>{" "}
           ou en envoyant un mail à{" "}
-          <a href="mailto:contact@jaipeurduvaccin.fr" target="_blank" rel="noopener">
+          <a
+            href="mailto:contact@jaipeurduvaccin.fr"
+            target="_blank"
+            rel="noopener"
+          >
             contact@jaipeurduvaccin.fr
           </a>
         </StyledParagraph>
