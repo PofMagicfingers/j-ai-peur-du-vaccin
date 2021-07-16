@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://jaipeurduvaccin.fr",
+    siteUrl: process.env.URL || "https://jaipeurduvaccin.fr",
     title: "J'ai peur du vaccin",
     description:
       "Cette page vise à regrouper les différentes ressources apportant des réponses scientifiques à des questions légitimes.",
