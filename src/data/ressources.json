@@ -30,3 +30,37 @@
     "badge": true
   }
 ]
+[
+  {
+    "text": "Dix doutes légitimes sur la vaccination",
+    "url": "https://www.letemps.ch/sciences/dix-doutes-legitimes-vaccination-zero-bonne-raison-ne-y-aller",
+    "author": "Le Temps"
+  },
+  {
+    "text": "Est-ce que je vais me faire vacciner ?",
+    "url": "https://www.youtube.com/watch?v=GBzJ77y8Bho",
+    "author": "Cyrus North"
+  },
+  {
+    "text": "Covaxinfo",
+    "url": "https://covaxinfo.fr/"
+  },
+  {
+    "text": "FAQ Vaccin COVID19 - Du Côté de la Science",
+    "url": "https://ducotedelascience.org/faq-vaccin-covid19-vos-questions-et-nos-reponses/"
+  },
+  {
+    "text": "Adiós Corona",
+    "url": "https://www.adioscorona.org/themes-questions/vaccins.html"
+  },
+  {
+    "text": "Vaccination info service",
+    "url": "https://vaccination-info-service.fr/Les-maladies-et-leurs-vaccins/COVID-19"
+  }, 
+  {
+    "text": "Vignettes réponses aux doutes sur le COVID",
+    "author": "To be or not toubib", 
+    "url": "https://www.facebook.com/media/set/?vanity=medecinedesnuls&set=a.863603497588754", 
+    "badge": true
+  }
+]
