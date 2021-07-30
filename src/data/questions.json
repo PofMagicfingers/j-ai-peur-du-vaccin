@@ -36,6 +36,10 @@
       {
         "text": "Composition des vaccins COVID (Pfizer, Moderna, Astrazeneca...)",
         "url": "https://www.mesvaccins.net/web/vaccines?utf8=%E2%9C%93&name_or_disease=vaccine&search-by-name=covid&search-by-disease=&commit=Chercher&search-by-age=&age_unit=ans"
+      },
+      {
+        "text": "Le séquençage ARNm des vaccins en open-source",
+        "url": "https://github.com/NAalytics/Assemblies-of-putative-SARS-CoV2-spike-encoding-mRNA-sequences-for-vaccines-BNT-162b2-and-mRNA-1273/blob/main/Assemblies%20of%20putative%20SARS-CoV2-spike-encoding%20mRNA%20sequences%20for%20vaccines%20BNT-162b2%20and%20mRNA-1273.docx.pdf"
       }
     ]
   },
@@ -65,6 +69,33 @@
         "text": "Les raisons d'un vaccin en temps record",
         "url": "https://www.quechoisir.org/actualite-covid-19-les-raisons-d-un-vaccin-en-temps-record-n86767/",
         "author": "Que choisir"
+      }
+    ]
+  },
+  {
+    "text": "Je ne veux pas enrichir Big-Pharma ou les médecins",
+    "description": "Se faire vacciner coûte moins cher, et donc rapporte moins, que de soigner le COVID. Le coût de la prise en charge d'une personne atteinte du COVID est largement plus important que le coût de sa vaccination. Deux compagnies productrices du vaccin, AstraZeneca et Johnson & Johnson ont assuré produire leurs doses “à prix coûtant”. On sait que le coût d'une vaccination à deux doses est facturé au plus 31 € (2×18$, cours actuel 1€ = 1,19$) en Europe, et le personnel des vaccinodrômes est souvent bénévole, alors que le coût moyen d'une personne hospitalisée pour un COVID s'il n'a pas de mutuelle est en moyenne de 1500 €.",
+    "color": "#993B00",
+    "sources": [
+      {
+        "text": "Le prix des vaccins contre le Covid-19 dans le monde",
+        "url": "https://fr.statista.com/infographie/23678/combien-coutent-prix-vaccins-contre-covid-19/",
+        "author": "Statista"
+      },
+      {
+        "text": "Le prix d'achat des vaccins contre le Covid-19 en Europe",
+        "url": "https://www.businessinsider.fr/le-prix-de-chaque-vaccin-anti-covid-en-europe-a-fuite-186133",
+        "author": "Business Insider, AFP"
+      },
+      {
+        "text": "Vaccinodrome de Toulouse: les Doyens disent “Bravo” aux étudiants et aux bénévoles",
+        "url": "https://www.ladepeche.fr/2021/04/18/vaccinodrome-de-toulouse-les-doyens-disent-bravo-aux-etudiants-et-aux-benevoles-9495548.php",
+        "author": "La Dépêche Du Midi"
+      },
+      {
+        "text": "La lourde facture pour les malades du coronavirus à l'hôpital",
+        "url": "https://www.lesechos.fr/economie-france/social/la-lourde-facture-pour-les-malades-du-coronavirus-a-lhopital-1228650",
+        "author": "Les Échos"
       }
     ]
   }
