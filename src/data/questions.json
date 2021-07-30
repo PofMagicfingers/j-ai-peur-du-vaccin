@@ -74,14 +74,9 @@
   },
   {
     "text": "Je ne veux pas enrichir Big-Pharma ou les médecins",
-    "description": "La prise en charge d'une personne atteinte d'un Covid long est largement plus importante que le coût de sa vaccination. Deux compagnies productrices du vaccin, AstraZeneca et Johnson & Johnson ont assuré produire leurs doses “à prix coûtant”. On sait que le coût d'une vaccination à deux doses est facturé au plus 31 € (2×18$, cours actuel 1€ = 1,19$) en Europe, et le personnel des vaccinodrômes est souvent bénévole. À comparer au coût moyen d'une personne hospitalisée pour un Covid, qui, s'il n'a pas de mutuelle, devra encore s'acquitter en moyenne 1500 €.",
+    "description": "Se faire vacciner coûte moins cher, et donc rapporte moins, que de soigner le COVID. Le coût de la prise en charge d'une personne atteinte du COVID est largement plus important que le coût de sa vaccination. Deux compagnies productrices du vaccin, AstraZeneca et Johnson & Johnson ont assuré produire leurs doses “à prix coûtant”. On sait que le coût d'une vaccination à deux doses est facturé au plus 31 € (2×18$, cours actuel 1€ = 1,19$) en Europe, et le personnel des vaccinodrômes est souvent bénévole, alors que le coût moyen d'une personne hospitalisée pour un COVID s'il n'a pas de mutuelle est en moyenne de 1500 €.",
     "color": "#993B00",
     "sources": [
-      {
-        "text": "Page interactive de calcul balance bénéfice risques",
-        "url": "https://cress-umr1153.fr/covid_vaccines/",
-        "author": "Centre de recherche épidémiologie et statistiques"
-      },
       {
         "text": "Le prix des vaccins contre le Covid-19 dans le monde",
         "url": "https://fr.statista.com/infographie/23678/combien-coutent-prix-vaccins-contre-covid-19/",
@@ -102,7 +97,6 @@
         "url": "https://www.lesechos.fr/economie-france/social/la-lourde-facture-pour-les-malades-du-coronavirus-a-lhopital-1228650",
         "author": "Les Échos"
       }
-
     ]
   }
 ]
