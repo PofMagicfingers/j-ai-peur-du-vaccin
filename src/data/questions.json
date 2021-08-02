@@ -74,7 +74,7 @@
   },
   {
     "text": "Je ne veux pas enrichir Big-Pharma ou les médecins",
-    "description": "Se faire vacciner coûte moins cher, et donc rapporte moins, que de soigner le COVID. Le coût de la prise en charge d'une personne atteinte du COVID est largement plus important que le coût de sa vaccination. Deux compagnies productrices du vaccin, AstraZeneca et Johnson & Johnson ont assuré produire leurs doses “à prix coûtant”. On sait que le coût d'une vaccination à deux doses est facturé au plus 31 € (2×18$, cours actuel 1€ = 1,19$) en Europe, et le personnel des vaccinodrômes est souvent bénévole, alors que le coût moyen d'une personne hospitalisée pour un COVID s'il n'a pas de mutuelle est en moyenne de 1500 €.",
+    "description": "Se faire vacciner coûte moins cher, et donc rapporte moins, que de soigner le COVID. Le coût de la prise en charge d'une personne atteinte du COVID est largement plus important que le coût de sa vaccination. Deux compagnies productrices du vaccin, AstraZeneca et Johnson & Johnson ont assuré produire leurs doses “à prix coûtant”. On sait que le coût d'une vaccination à deux doses est facturé au plus 42,93€ (2×25,50$, cours actuel 1$ = 0,84€) en Europe, et le personnel des vaccinodrômes est souvent bénévole, alors que le coût moyen d'une personne hospitalisée pour un COVID s'il n'a pas de mutuelle est en moyenne de 1500 €.",
     "color": "#993B00",
     "sources": [
       {
@@ -86,6 +86,11 @@
         "text": "Le prix d'achat des vaccins contre le Covid-19 en Europe",
         "url": "https://www.businessinsider.fr/le-prix-de-chaque-vaccin-anti-covid-en-europe-a-fuite-186133",
         "author": "Business Insider, AFP"
+      },
+      {
+        "text": "Pfizer and Moderna ramp up EU Covid vaccine prices",
+        "url": "https://www.ft.com/content/d415a01e-d065-44a9-bad4-f9235aa04c1a",
+        "author": "Financial Times"
       },
       {
         "text": "Vaccinodrome de Toulouse: les Doyens disent “Bravo” aux étudiants et aux bénévoles",
